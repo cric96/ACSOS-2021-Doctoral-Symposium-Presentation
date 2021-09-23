@@ -33,11 +33,9 @@ Machine Learning}
 \section{Collective (Self) Adaptive System}
 \begin{frame}{Background}
   \pdfcomment{
-    This kind of system is the target of our approach, they consist in a large number of 
-    intercomunicating entities that expose some kind of intelligent behaviour distilled via learning.
-    Learning is a key mechanism to enforce adaptivity against faiulure, enviromental changes, openess and eteregeity
-    Over the years, in literature a plethora of approach aim at managin this complexity. In my research group we are focused on 
-    Aggregate Computing.
+    These kinds of systems are the target of our approach. They consist of a large number of communicating entities that exhibit a kind of intelligent behaviour that arises through learning.
+    Learning is an important mechanism to enforce adaptability to errors, environmental changes, openness and heterogeneity.
+    For years, there have been various approaches in the literature to deal with this complexity. In my research group, we focus on Aggregate Computing.
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -46,22 +44,13 @@ Machine Learning}
 \section{State of the art solution}
 \begin{frame}{Aggregate Computing}
   \pdfcomment{
-    It is a top-down approach by which it is possibile to coordinate large scale, possibly etherogenous, very dinamyc 
-    system. It mainly consist in a manipulation of a distributed data structure called Computational Field. Instead of 
-    swarm intelligent approach, the aim here is to "program" self-organisation, posing it as something like first-class citezen 
-    of the language. The program then can be splitted in each node, so collective behaviour can easly scale up In
-    very large node system (hunder or thunsand nodes).
-    The key insight of this apporach is their compositionality inspired by functional programming.
-    Indeed, the paradigm is based on a little algebra called field-calculus, that express the minimal constructs
-    able to express whatever spatio-temporal computation.
-    Over it, there where build a middle-level abstraction so-called Building-Block, consisting in usual pattern
-    used in Aggregate Computing.
-    With them then, we built application level API to support developers in making complex large scale application.
-    Over last ten/fiveteen years, this metholodigy growth rapdly. It is applied in many context like
-    crowd engineering, swarm robotics, and smart cities.
-    Pragramtically, we see that it is not easy to build building block that works in various scenario (e.g. high node mobility).
-    Sometimes it is a very tricky and fine tuning process by wich we have to put some magic constant in order to make our application 
-    works
+    It is a top-down approach that makes it possible to coordinate large-scale, possibly heterogeneous, highly dynamic systems. It mainly consists of manipulating a distributed data structure called Computational Field. In contrast to swarm intelligent approaches, the idea here is to "program" the self-organisation by representing it as something like a first-class citizen of the language. The program then can be split in each node, so that the collective behaviour can be easily scaled in very large systems (hundreds or thousands of nodes).
+    A key advantage of this approach is its compositionality, which is inspired by functional programming.
+     The paradigm is based on a small algebra called the field calculus, which expresses the minimal constructs that can be used to express any kind of spatiotemporal computation. On top of this, we built intermediate-level abstractions, called Building-Block, which consist of the common patterns used in Aggregate Computing.
+    We then used them to build domain-oriented applications to help developers express complex collective behaviour.
+    Over the last ten/fifteen years, this methodology has grown rapidly. It is being used in many contexts such as crowd engineering, swarm robotics, and smart cities.
+    Pragmatically, we see that it is not easy to develop building blocks that work well in different scenarios (e.g., high node mobility).
+    Sometimes it is a very tricky process of fine-tuning where we need to apply some constants to make our application work.
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -70,14 +59,8 @@ Machine Learning}
 \section{Machine Learning}
 \begin{frame}{Machine Learning}
   \pdfcomment {
-    Another way to handle these system make them learn the right behaviour. Here, thanks also
-    to the new waves of interest in Machine Learning, there are a lot of insight, solutions and ideas.
-    Reinforcement Learning, Superverised Learning, Evolutionary computing are all of the 
-    tatics that is used in research. Nevertheless they goodness, the solution are in general
-    very specific and cannot be used easly in different scenario. Futhermore, some thereom proven in single agent
-    context cannot be extended in a multi agent setting.
-    Here in fact, we have to cocern about non-stationary environment, very large scale space, distributed control
-    and massive large scale that make ML approach very hardly to scale up in diffent contexts.
+    Another way of dealing with these systems is to teach them to behave properly. Here, thanks in part to the new waves of interest in Machine Learning, there are many insights, solutions, and ideas. Reinforcement Learning, Supervised Learning, Evolutionary Computing are all tactics used in this direction. Although these solutions lead to good results, they are generally very context-specific and cannot be easily applied in different situations. 
+    Here we have to deal with non-stationary environments, large research space and a distributed control, which makes Machine Learning generalisation in different contexts very difficult.
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -86,8 +69,8 @@ Machine Learning}
 \section{Problem statement}
 \begin{frame}{Problem statement}
   \pdfcomment{
-    So mainly our overall goal is:
-    Extended Common aggregate computing paradign with Machine Learning capability in order to improve adaptivity and to simplify collective behaviour definition
+    Thus, our overall goal is:
+    Extend common aggregate computing paradigm to include the Machine Learning capability to improve adaptability and simplify the definition and refinement of collective behaviour.
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -96,14 +79,10 @@ Machine Learning}
 \section{Motivation}
 \begin{frame}{Motivation}
   \pdfcomment{
-    But why? In some sense with this combination we want to improve Aggregate Computing.
-    Indeed currently it have a key ingredient to make it excellent in applying in CSAS, take to
-    its scale indipendent nature.
-    Futhermore we want to explore a new way to declare behaviour. Where a part of collective behaviour
-    are still expressed in term of API composition and call, and a part that is hard to be described is 
-    distilled by learning
-    Finally we want to navigate deeply the Machine Learning approach in this very hard kind of system. Even if in the last 
-    year some work initially to be done, Field-Based coordination have never meet ML. It might open new opportunities and technique.  
+    Indeed, aggregate computing currently has a key component that makes it eminently suitable for application in CSAS, namely its scale-independent nature. A program is expressed for a logical system and can then be transparently applied to any size 
+    (or to any topology, thanks to the recent work of the pulverised architecture).
+    Moreover, we would like to explore a new way to declare collective behaviour: A part of the collective behaviour is still expressed in terms of API composition and function calls, while another part, where humans have difficulty expressing the correct behaviour, is distilled through learning.
+    Finally, we want to deepen the approach of Machine Learning in this very complex kind of system. Although some work has been started in the last year, Field-Based coordination has never meet Machine Learning. It could open new opportunities and techniques that can also improve the current results of state-of-the-art machine learning algorithms.   
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -113,11 +92,10 @@ Machine Learning}
 \begin{frame}{Research Questions}
   \pdfcomment 
   {
-    The research direction that we aim to tackle are:
-    i) what kind of machine learning approach make sense in combination to Aggregate Computing?
-    ii) at what level of abstraction ML can be useful for Aggregate Computing?
-    iii) what Aggregate Computing have in common with ML applied to Collective Adaptive System?
-    This what guiding us in my first year of research.
+    The research directions we want to tackle are: 
+    i) what kind of machine learning is useful in combination with Aggregate Computing? 
+    ii) at what level of abstraction can Machine Learning be useful for Aggregate Computing? 
+    iii) what does Aggregate Computing have in common with ML, applied to Collective Adaptive System?
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -126,10 +104,10 @@ Machine Learning}
 \section{Early results}
 \begin{frame}{Early results}
   \pdfcomment {
-    The main direction taken currently are:
-    i) Combine RL with Supervised Learning
-    ii) Combine Aggregate Computing with Evolutionary Computing
-    iii) And the finally combine Aggregate Computing with Reinforcement Learning
+    So, speaking about the early work and results, we mainly try these directions:
+    i) Combine Aggregate Computing with Supervised Learning 
+    ii) Combine Aggregate Computing with Evolutionary Computing iii) 
+    And finally, iii) we combine Aggregate Computing with Reinforcement Learning.
 }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -138,14 +116,13 @@ Machine Learning}
 \section{Enforcements}
 \begin{frame}{Enforcements}
   \pdfcomment{
-    Currently we setting our learning problem as an Homegenous Team Learning, that is some sense is 
-    very near to Aggregate Computing Setting. Indeed, each agent should execute the same behaviour in order
-    to reach a global result.
-    Then, we perform this test offline, using a Alchemist, a well-know and robust meta simulator used with
-    Aggregate Computing.
-    Then, we are focused on the Buildign Block improvement and definition level, because it is something very important
-    in our research area. Indeed, if we can boost up block defintion or improvement, it will gain a boost in our 
-    direction.
+    Currently, we formulate our learning problem as Homogenous Team Learning, 
+    which in a sense is very close to the Aggregate Computing setting. 
+    Indeed, each agent should perform the same behaviour to obtain a global result.
+    We then run this test offline using Alchemist, 
+    a well-known and robust simulator used with Aggregate Computing. 
+    Then we focus on improving the building blocks because this is something very important in our research area. 
+    If we can increase the block definition or improvement, it will improve our current solutions.  
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,12 +131,12 @@ Machine Learning}
 \section{Computational Model}
 \begin{frame}{Interaction model}
   \pdfcomment{
-    In aggregate computing, we see a systema as a node collected with each other by some
-    neighbourh relatioship that could be phisical (namely a node have a link with another node)
-    or logical/position based.
-    Each node have only this partial vision of the entire aggregate. The interaction with
-    the neighbourhood happen via message passing. The information exechanged depend on the
-    execution model of this system.
+    Before I talk about my early works, let me briefly explain what aggregate computing is. 
+    Here, we view a system as a large group of computing nodes connected by a neighbour relationship, 
+    which can be either physical (i.e., one node has a connection to another node) or logical/position-based.
+    Each node has only a partial view of the entire aggregate. Interaction with the neighbourhood 
+    is done through message passing. 
+    The information exchanged depends on the execution model of this system..
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -167,15 +144,10 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Execution model}
   \pdfcomment{
-    An aggregate program has two point of view. A collective one that speak in term of
-    computional field evaluation and a local one that follow the global behaviour executing
-    periodically a round, i.e the atomic part of a computation in an aggregate system.
-    A round is comprised by: a context creation: by which node take values from sensors, message passed
-    from neighbourhood and the old value produce. Then with it, evaluate the aggregate program
-    producing an Export (namely a data structure contained all the information necessary to neighbours to evaluate the 
-    programm), with this export a node can perform some local actuation and then share it with 
-    the entire neighbourhood.
-    Note that each computation is completly asichrnours w.rt. other node.
+    An aggregate programme has two points of view: i) A collective viewpoint, which refers to the evaluation of the computational field, and a local viewpoint, which follows the global behaviour and periodically executes a round, i.e., the atomic part of the computation in an aggregate system.
+    A round consists of:  i) a context creation where nodes take in values from sensors, messages from the neighbourhood, and their old output. ii) Then, the aggregate program is evaluated and export is created.
+    an export is a data structure that contains all the information that the neighbours need to evaluate the program). iii) With this export, a node can perform a local actuation and iiii) finally, each node shares the export in broadcast to the entire neighbourhood.
+    Note that any computation is asynchronous to other nodes.
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -184,35 +156,37 @@ Machine Learning}
 \begin{frame}{Gradient/Hop count example}
   \pdfcomment{
     Currently, our reference building block is the gradient from a source zone.
-    It produces a computational field in which each node produce the distance from a 
-    node marked as source. Hop count is very similar but instead of distance the program
-    return the number of hop from a target node.
-    A naive implemetation of this algorithms consist in take the minimum value from the neighbourhood Field
-    incresed with the distance from it.
-    Put an image that shows graphically the meaning of gradient and hop count. 
+    It generates a computational field in which each node generates the distance from a node marked as a source. 
+    The hop count problem is very similar, but instead of distance, the program returns the number of hops from 
+    a destination node. A naive implementation of this algorithm consists in taking the minimum value from 
+    the neighbour field and incremented by the distance to it.
+    Create an image that graphically represents the importance of the gradient and the number of hops
   }
 %% Here put an image that show the step to compute this field.
 \end{frame}
 \begin{frame}{Gradient/Hop count example: Problem}
   \pdfcomment{
-    This very simple solution soffer of slow rising problem: Suppose you have two source and one of them
-    at some point in time disappear. In this part node need more time to reach the right value
-    in difference to the initial part.
-    So, our first effort consist in increase the converge time of basic hop count algorithm. This is already done
-    manually, but we what something that learn alone how to bring to a faster convergence.
+    This very simple solution suffers from the slow-rising problem: 
+    suppose you have two sources and one of them eventually disappears. 
+    In this case, the nodes take more time to reach the correct value, 
+    as opposed to the time taken at the beginning of the algorithm's execution.
+    So our first attempt is to reduce the convergence time of the basic hop-count algorithm. 
+    This is already done algorithmically, but we need something that learns how to achieve faster 
+    convergence on its own.  
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Aggregate Computing and Supervised Learning}
-  \pdfcomment{In this kind of setting, we assume that we know the right result of the collective at certain point in time.
-    So, starting to initial global setting A, we would reach a stable position B. In the gradient problem for example, the stable position
-    consist in the distance from a node.
-    In some way it is inspired by
-    Graph Neural Network, in which the input of the net is a Graph and the ground truth again could be a graph.
-    here there are some experiments done in this direction. What we observe it that is it very hard to gain perfomance 
-    in this way. Indeed we does not know the right result for each time step, making hard to guide the collective in a performance boost.
+  \pdfcomment{
+    So starting from the initial global setting A, we would achieve a stable position B. 
+    In the gradient problem, for example, the stable position consists of the distance to a node.
+    In a way, it is inspired by Graph Neural Network, where the input of the network is a graph and 
+    the ground truth could be a graph in turn.
+    There are some experiments in this direction here. We note that it is very difficult to achieve
+    a performance boost in this way. Indeed we do not know the correct outcome for each time step, 
+    which makes it difficult to lead the collective to improve performance.
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -220,10 +194,11 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Aggregate Computing and Evolutionary computing}
   \pdfcomment{
-    Here we do not need a right ground truth, but it is necessary only to specify a fitness fuction that
-    evaluate the overall behaviour of the system. This kind of method is used in swarm robotics and even in 
-    automatic design. Here we observe very low performance in converging to a good solution. Sometimes it never reach one and
-    locked the search phases into local minimum
+    Here we do not need a correct ground truth, but we only need to specify a fitness 
+    function that evaluates the overall behaviour of the system. 
+    This type of method is used in swarm robotics and even in automatic design. 
+    Here we observe very low performance in converging to a good solution. 
+    Sometimes a solution is never reached and the search is trapped in a local minimum
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -232,12 +207,38 @@ Machine Learning}
 \section{References}
 \begin{frame}{Aggregate Computing and Reinforcement Learning}
   \pdfcomment{
-    This combination seems to be one of the most appropiate for several reason:
-    i) in literature (cite) seems to be the best way to integrate learning in CSAS
-    ii) it is built to maximise the long term result and do not maximise only local best response.
-    iii) even if aggregate program seems to be a distributed regression, it is quite easy to decode problems in term of agents state and actions.
+    This combination seems to be one of the most suitable for several reasons:
+    i) in the literature, it seems the best way to integrate learning into CSAS 
+    ii) it is designed to maximise the long term outcome, not just the best local response.
+    iii) even if the aggregate program seems to be a distributed regression, it is quite easy to encode problems in terms of agent states and actions.  
   }
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Aggregate Computing and Reinforcement Learning: Hop count}
+  \pdfcomment{
+    Our first attempt is quite simple: we try to use standard Q-learning to speed up hop count convergence. There seems to reach good performance in the literature, although there are no theorems proving convergence as in the single-agent context.
+    For example, one action that an agent might take is to increase output
+    Instead, the state is in some way built upon the current node and neighbourhood outputs. 
+    In this case, we use a window of difference from the neighbours that encodes the rate of increase in hop count.
+    The reward signal is: 0) if the output is correct at a given time t -1) otherwise.
+    With this very simple setting, we can outperform the standard hop count algorithm.
+    This is a very early result. More studies are needed to understand if this solution can be generalised.
+  }
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Conclusion}
+  \pdfcomment{
+    In summary, this first year of my research has allowed me to observe current trends in CSAS. 
+    Our goal is to endow Aggregate Computing with intelligence, which in itself is a good framework for
+    this kind of system
+    The first experimental tests have shown that Reinforcement Learning seems to be a good method that can be applied in our scenario, even if we need a deeper analysis to verify its effectiveness in other applications
+  } 
+\end{frame}
+
 \begin{frame}{References}
 
 \end{frame}
