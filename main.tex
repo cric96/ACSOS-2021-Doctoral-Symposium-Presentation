@@ -21,6 +21,7 @@ Machine Learning}
 \useAccentIndigo
 %% Document starts
 \begin{document}
+\setbeamercovered{transparent=10}
 \begin{frame}
   \titlepage
   \pdfcomment{
@@ -32,17 +33,32 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Collective (Self) Adaptive System}
 \begin{frame}{Background}
+  \begin{card}[Collective (Self-)Adaptive Systems]
   \pdfcomment{
     These kinds of systems are the target of our approach. They consist of a large number of communicating entities that exhibit a kind of intelligent behaviour that arises through learning.
     Learning is an important mechanism to enforce adaptability to errors, environmental changes, openness and heterogeneity.
     For years, there have been various approaches in the literature to deal with this complexity. In my research group, we focus on Aggregate Computing.
   }
+  \end{card}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art solution}
 \begin{frame}{Aggregate Computing}
+  \begin{card}
+    \begin{itemize}
+      \item <1-> a top-down global-to-local approach to express collective behaviour
+      \item <2-> rooted on \textit{field-calculus}
+      \item <3-> used in various scenarios ranging from smart cities to crowd engineering
+    \end{itemize}
+  \end{card}
+  \pause[3]
+  \begin{cardRed}[Problem]
+    \centering
+    \textit{Building block design is hard}
+  \end{cardRed}
+
   \pdfcomment{
     It is a top-down approach that makes it possible to coordinate large-scale, possibly heterogeneous, highly dynamic systems. It mainly consists of manipulating a distributed data structure called Computational Field. In contrast to swarm intelligent approaches, the idea here is to "program" the self-organisation by representing it as something like a first-class citizen of the language. The program then can be split in each node, so that the collective behaviour can be easily scaled in very large systems (hundreds or thousands of nodes).
     A key advantage of this approach is its compositionality, which is inspired by functional programming.
@@ -58,8 +74,25 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Machine Learning}
 \begin{frame}{Machine Learning}
+  \begin{card}{
+    \begin{itemize}
+      \item <1->Supervised Learning applied in %cite a,b,c
+      \item <2->Reinforcement Learning applied in %cite a,b,c
+      \item <3->Evolutionary Computing applied in %cite a,b,c
+    \end{itemize}
+  }
+  \end{card}
+  \pause[3]
+  \begin{cardRed}[Problem]
+    \centering
+    \textit{Solutions are application-specific}
+  \end{cardRed}
   \pdfcomment {
-    Another way of dealing with these systems is to teach them to behave properly. Here, thanks in part to the new waves of interest in Machine Learning, there are many insights, solutions, and ideas. Reinforcement Learning, Supervised Learning, Evolutionary Computing are all tactics used in this direction. Although these solutions lead to good results, they are generally very context-specific and cannot be easily applied in different situations. 
+    Another way of dealing with these systems is to teach them to behave properly. 
+    Here, thanks in part to the new waves of interest in Machine Learning, 
+    there are many insights, solutions, and ideas. 
+    Reinforcement Learning, Supervised Learning, Evolutionary Computing are all tactics used in this direction. 
+    Although these solutions lead to good results, they are generally very context-specific and cannot be easily applied in different situations. 
     Here we have to deal with non-stationary environments, large research space and a distributed control, which makes Machine Learning generalisation in different contexts very difficult.
   }
 \end{frame}
@@ -68,6 +101,12 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problem statement}
 \begin{frame}{Problem statement}
+  \begin{card}
+    {
+      \color{accent}
+      Extend Aggregate Computing paradigm to include the Machine Learning capability to improve adaptability and simplify the definition and refinement of collective behaviour.
+    }
+  \end{card}
   \pdfcomment{
     Thus, our overall goal is:
     Extend common aggregate computing paradigm to include the Machine Learning capability to improve adaptability and simplify the definition and refinement of collective behaviour.
@@ -78,11 +117,18 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Motivation}
 \begin{frame}{Motivation}
+  \begin{card}
+    \begin{itemize}
+      \item <1-> Aggregate Computing is scale independent by construction
+      \item <2-> Hybrid collective program description
+      \item <3-> Try to improve current state-of-the-art Machine Learning applying in CSAS
+    \end{itemize}
+  \end{card}
   \pdfcomment{
     Indeed, aggregate computing currently has a key component that makes it eminently suitable for application in CSAS, namely its scale-independent nature. A program is expressed for a logical system and can then be transparently applied to any size 
     (or to any topology, thanks to the recent work of the pulverised architecture).
     Moreover, we would like to explore a new way to declare collective behaviour: A part of the collective behaviour is still expressed in terms of API composition and function calls, while another part, where humans have difficulty expressing the correct behaviour, is distilled through learning.
-    Finally, we want to deepen the approach of Machine Learning in this very complex kind of system. Although some work has been started in the last year, Field-Based coordination has never meet Machine Learning. It could open new opportunities and techniques that can also improve the current results of state-of-the-art machine learning algorithms.   
+    Finally, we want to deepen the approach of Machine Learning in this very complex kind of system. Although some work has been started in the last years, Field-Based coordination has never meet Machine Learning. It could open new opportunities and techniques that can also improve the current results of state-of-the-art machine learning algorithms.   
   }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,6 +136,13 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Research Question}
 \begin{frame}{Research Questions}
+  \begin{card}
+    \begin{itemize}
+      \item <1-> What kind of Machine Learning approach is useful in combination with Aggregate Computing?
+      \item <2-> At what level of abstraction can Machine Learning be useful for Aggregate Computing
+      \item <3-> What does Aggregate Computing have in common with Machine Learning, applied to Collective Adaptive System?
+    \end{itemize}  
+  \end{card}
   \pdfcomment 
   {
     The research directions we want to tackle are: 
