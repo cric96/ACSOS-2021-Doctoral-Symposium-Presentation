@@ -30,14 +30,20 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Collective (Self) Adaptive System}
+\section{Collective (Self-)Adaptive System}
 \begin{frame}{Background}
-  \begin{card}[Collective Adaptive Systems]
+  \begin{card}[Collective (Self-)Adaptive Systems (\textbf{CSAS})]
+    {
+      \color{accent}
+      Distributed and interconnected systems composed of multiple agents that can perform complex 
+      tasks exhibiting robust collective behaviours while achieve system-wide and agent-specific goal. 
+    }
+
   \pdfcomment{
     Our research effort consists of an engineering Collective (Self-)Adaptive System. 
     They can be defined as distributed and interconnected systems composed of multiple agents that can perform complex 
     tasks such as environmental data collection, search and rescue operations, and discovery of natural resources.
-    So the collective to exhibit robust behaviour while achieving system-wide and agent-specific goals.
+    So the collective exhibit robust behaviour while achieving system-wide and agent-specific goals.
     For years, there have been various approaches in the literature to deal with these systems. 
     In my research group, we focus on Aggregate Computing.
   }
@@ -52,11 +58,12 @@ Machine Learning}
     \begin{itemize}
       \item <1-> a top-down global-to-local approach to express collective behaviour
       \item <2-> rooted on \textit{field-calculus}
-      \item <3-> used in various scenarios ranging from smart cities to crowd engineering
+      \item <3-> collective behaviour does not depends on system scale
+      \item <4-> used in various scenarios ranging from smart cities to crowd engineering
     \end{itemize}
   \end{card}
   \pause[3]
-  \begin{cardRed}[Problem]
+  \begin{cardRed}[\textbf{Problem}]
     \centering
     \textit{Building block design is hard}
   \end{cardRed}
@@ -82,14 +89,14 @@ Machine Learning}
 \begin{frame}{Machine Learning}
   \begin{card}{
     \begin{itemize}
-      \item <1->Supervised Learning applied in %cite a,b,c
-      \item <2->Reinforcement Learning applied in %cite a,b,c
-      \item <3->Evolutionary Computing applied in %cite a,b,c
+      \item <1-> Enhance agents with \textit{some} learning capabilities 
+      \item <2-> Learning improve adaptability, helping agent to act in uncertain environments
+      \item <3-> Supervised Learning, Reinforcement Learning and Evolutionary Computing are typacally used in CSAS
     \end{itemize}
   }
   \end{card}
   \pause[3]
-  \begin{cardRed}[Problem]
+  \begin{cardRed}[\textbf{Problem}]
     \centering
     \textit{Solutions are application-specific}
   \end{cardRed}
@@ -109,6 +116,7 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problem statement}
 \begin{frame}{Problem statement}
+  \centering
   \begin{card}
     {
       \color{accent}
@@ -166,33 +174,51 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Early results}
 \begin{frame}{Early results}
-  \pdfcomment {
-    So, speaking about the early work and results, we mainly try to:
-    i) Combine Aggregate Computing with Supervised Learning 
-    ii) Combine Aggregate Computing with Evolutionary Computing iii) 
-    iii) Combine Aggregate Computing with Reinforcement Learning.
-}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Enforcements}
-\begin{frame}{Enforcements}
-  \pdfcomment{
-    We formulate our learning problem as Homogenous Team Learning, 
-    which is very close to the Aggregate Computing setting. 
-    Indeed, each agent should perform the same behaviour to obtain a collective result.
-    We then run this test offline using Alchemist, 
-    a well-known and robust simulator used with Aggregate Computing. 
-    Then we focus on improving the building blocks because this is something very important in our research area. 
-    If we can improve the building block definition process, it then will improve our future and current solutions.  
-  }
+  \begin{multicols}{2}
+    \begin{card}[Setting]
+      \begin{itemize}
+        \item <1->Focus on simple but well-know problem in Aggregate Computing
+        \item <2->Learning used to guide building-block improvement
+        \item <3->Veryfying what kind of approach is well-suited for Aggregate Computing
+      \end{itemize}
+      \pdfcomment{
+        So, speaking about the early results, we mainly try to create a very simple 
+        scenario by which learning have sense at all.
+        So for this reason we focus on improving the building blocks because this is something very important in our research area. 
+        If we can improve the building block definition process, it then will improve our future and current solutions.  
+        For having a clear vision of various approach, we initially try to explore each solution
+        that consist in: i) Combine Aggregate Computing with Supervised Learning 
+        ii) Combine Aggregate Computing with Evolutionary Computing iii) 
+        iii) Combine Aggregate Computing with Reinforcement Learning.
+      }
+    \end{card}
+    \pause[3]
+    \begin{cardRed}[\textbf{Constraints}]
+      \begin{itemize}
+        \item <4->Learning problem framed as Homogenous Team Learning
+        \item <5->Learning done off-line
+      \end{itemize}
+      \pdfcomment{
+        We formulate our learning problem as Homogenous Team Learning, 
+        which is very close to the Aggregate Computing setting. 
+        Indeed, each agent should perform the same behaviour to obtain a collective result.
+        We then run this test offline using Alchemist, 
+        a well-known and robust simulator used with Aggregate Computing. 
+      }
+    \end{cardRed}
+    
+  \end{multicols}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Computational Model}
 \begin{frame}{Interaction model}
+  \begin{multicols}{2}
+    \cardImg{example-image-a}{0.5\textwidth}
+    \presentationGraphics{example-image-b}{1}{0.5}
+  \end{multicols}
+  \pause[2]
   \pdfcomment{
     Before I talk about my early works, let me briefly explain what aggregate computing is. 
     Here, we view a system as a large group of computing nodes connected by a neighbour relationship, 
@@ -205,6 +231,24 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Execution model}
+  \begin{multicols}{2}
+    \begin{card}[Round steps]
+      \begin{itemize}
+        \item <1-> context creation
+        \item <2-> program evaluation producing an export
+        \item <3-> export sharing to neighbourhood
+      \end{itemize}
+    \end{card}
+    \only<1>{
+      \cardImg{example-image-a}{0.5\textwidth}
+    }
+    \only<2>{
+      \cardImg{example-image-b}{0.5\textwidth}
+    }
+    \only<3>{
+      \cardImg{example-image-c}{0.5\textwidth}
+    }
+  \end{multicols}
   \pdfcomment{
     In these messages, the nodes share the local knowledge necessary to run a program. Indeed
     an aggregate program has two points of view: i) A collective viewpoint, which refers to the evaluation of computational fields, and a local viewpoint, which follows the global behaviour and periodically executes a round, i.e., 
@@ -219,17 +263,41 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Gradient/Hop count example}
+  \begin{multicols}{2}
+    \begin{card}[Definition]
+      A program that produce a computational 
+      field where each node
+      contains the distance from a source zone.
+    \end{card}
+    \only<1>{
+      \cardImg{example-image-a}{0.5\textwidth}
+    }
+    \only<2>{
+      \cardImg{example-image-b}{0.5\textwidth}
+    }
+    \only<3>{
+      \cardImg{example-image-c}{0.5\textwidth}
+    }
+  \end{multicols}
   \pdfcomment{
     Currently, our reference building block is the gradient from a source zone.
     It generates a computational field in which each node generates the distance from a node marked as a source. 
     The hop count problem is similar. Instead of evaluating the distance, the program returns the number of hops from a destination node.
     A naive implementation of this algorithm consists in: i) taking the minimum value from 
     the neighbour field and ii) incremented by the distance to it.
-    %Create an image that graphically represents the importance of the gradient and the number of hops
   }
 %% Here put an image that show the step to compute this field.
 \end{frame}
-\begin{frame}{Gradient/Hop count example: Problem}
+\begin{frame}{Gradient/Hop count example}
+  \begin{cardRed}[\textbf{Problem}]
+    Naive solutions suffers of the slow-rising problem.
+  \end{cardRed}
+  \begin{multicols}{3}
+    \cardImg{example-image-a}{0.31\textwidth}
+    \presentationGraphics{example-image-b}{1}{0.31}
+    \presentationGraphics{example-image-c}{1-2}{0.31}
+  \end{multicols}
+  \pause[3]
   \pdfcomment{
     This solution suffers from the slow-rising problem: 
     suppose you have two sources and one of them eventually disappears. 
@@ -247,7 +315,9 @@ Machine Learning}
   \pdfcomment{
     So starting from an initial global setting, we would achieve some stable results. 
     In the gradient problem, for example, the stable position consists of the distance to a node.
-    We do some experiments in this direction. We note that it is challenging to achieve
+    We do some experiments in this direction.
+    In this setting each agent has the same neural network trained offline using simulations.
+    We note that it is challenging to achieve
     a performance boost in this way. Indeed we do not know the correct outcome for each time step, 
     which makes it difficult to guide the collective to learn a better algorithm.
   }
