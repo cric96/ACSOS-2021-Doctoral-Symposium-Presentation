@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
 \usepackage{pgfpages}
+\usepackage{fontawesome5}
 \usepackage[draft]{pdfcomment}
 \title{Research directions for Aggregate Computing with
 Machine Learning}
@@ -15,13 +16,21 @@ Machine Learning}
 \usetheme{material}
 %& Theme
 \usetheme{material}
+\setbeamercolor{button}{bg=white,fg=accent}
+\def\insertgotosymbol{%
+  \faLink
+}
 \useLightTheme
 \usePrimaryBlueGrey
 \useAccentIndigo
 %% Document starts
 \begin{document}
 \setbeamercovered{transparent=10}
+\setbeamertemplate{itemize item}{\faDotCircle}
 \begin{frame}
+  \begin{backgroundblock} 
+    \includegraphics[width=\paperwidth]{img/main-background.jpg} 
+  \end{backgroundblock} 
   \titlepage
   \pdfcomment{
     A brief introduction about who I am and my research goals
@@ -32,6 +41,9 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Collective (Self-)Adaptive System}
 \begin{frame}{Background}
+  \begin{backgroundblock} 
+    \includegraphics[width=\paperwidth]{img/main-background.jpg} 
+  \end{backgroundblock} 
   \begin{card}[Collective (Self-)Adaptive Systems (\textbf{CSAS})]
     {
       \color{accent}
@@ -54,6 +66,9 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{State of the art solution}
 \begin{frame}{Aggregate Computing}
+  \begin{backgroundblock} 
+    \includegraphics[width=\paperwidth]{img/aggregate-computing.jpg} 
+  \end{backgroundblock} 
   \begin{card}
     \begin{itemize}
       \item <1-> a top-down global-to-local approach to express collective behaviour
@@ -62,8 +77,8 @@ Machine Learning}
       \item <4-> used in various scenarios ranging from smart cities to crowd engineering
     \end{itemize}
   \end{card}
-  \pause[3]
-  \begin{cardRed}[\textbf{Problem}]
+  \pause[5]
+  \begin{cardRed}[\textbf{Problem} \faThumbsDown]
     \centering
     \textit{Building block design is hard}
   \end{cardRed}
@@ -87,6 +102,9 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Machine Learning}
 \begin{frame}{Machine Learning}
+  \begin{backgroundblock} 
+    \includegraphics[width=\paperwidth]{img/main-background.jpg} 
+  \end{backgroundblock} 
   \begin{card}{
     \begin{itemize}
       \item <1-> Enhance agents with \textit{some} learning capabilities 
@@ -95,8 +113,8 @@ Machine Learning}
     \end{itemize}
   }
   \end{card}
-  \pause[3]
-  \begin{cardRed}[\textbf{Problem}]
+  \pause[4]
+  \begin{cardRed}[\textbf{Problem} \faThumbsDown]
     \centering
     \textit{Solutions are application-specific}
   \end{cardRed}
@@ -116,6 +134,9 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Problem statement}
 \begin{frame}{Problem statement}
+  \begin{backgroundblock} 
+    \includegraphics[width=\paperwidth]{img/problem-statement.jpg} 
+  \end{backgroundblock} 
   \centering
   \begin{card}
     {
@@ -133,11 +154,14 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Motivation}
 \begin{frame}{Motivation}
+  \begin{backgroundblock} 
+    \includegraphics[width=\paperwidth]{img/motivation.jpg} 
+  \end{backgroundblock} 
   \begin{card}
     \begin{itemize}
-      \item <1-> Aggregate Computing is scale independent by construction
-      \item <2-> Hybrid collective program description
-      \item <3-> Try to improve current state-of-the-art Machine Learning applying in CSAS
+      \item[\faCheck]  <1-> Aggregate Computing is scale independent by construction
+      \item[\faCheck]  <2-> Hybrid collective program description
+      \item[\faCheck]  <3-> Try to improve current state-of-the-art Machine Learning applying in CSAS
     \end{itemize}
   \end{card}
   \pdfcomment{
@@ -154,11 +178,14 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Research Question}
 \begin{frame}{Research Questions}
+  \begin{backgroundblock} 
+    \includegraphics[width=\paperwidth]{img/background.jpg} 
+  \end{backgroundblock} 
   \begin{card}
     \begin{itemize}
-      \item <1-> What kind of Machine Learning approach is useful in combination with Aggregate Computing?
-      \item <2-> At what level of abstraction can Machine Learning be useful for Aggregate Computing
-      \item <3-> What does Aggregate Computing have in common with Machine Learning, applied to Collective Self-Adaptive System?
+      \item[\faQuestion] <1-> What kind of Machine Learning approach is useful in combination with Aggregate Computing?
+      \item[\faQuestion] <2-> At what level of abstraction can Machine Learning be useful for Aggregate Computing
+      \item[\faQuestion] <3-> What does Aggregate Computing have in common with Machine Learning, applied to Collective Self-Adaptive System?
     \end{itemize}  
   \end{card}
   \pdfcomment 
@@ -192,7 +219,7 @@ Machine Learning}
         iii) Combine Aggregate Computing with Reinforcement Learning.
       }
     \end{card}
-    \pause[3]
+    \pause[4]
     \begin{cardRed}[\textbf{Constraints}]
       \begin{itemize}
         \item <4->Learning problem framed as Homogenous Team Learning
@@ -213,12 +240,18 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Computational Model}
-\begin{frame}{Interaction model}
+\begin{frame}{Computational model}
   \begin{multicols}{2}
-    \cardImg{example-image-a}{0.5\textwidth}
-    \presentationGraphics{example-image-b}{1}{0.5}
+    \begin{card}
+      \begin{itemize}
+        \item <1->Ensemble of node with an identifier
+        \item <2->Each node has a local-view (i.e. neighbours relationship)
+        \item <3->Interaction happens with message passing (done continously, see next slide).
+      \end{itemize}    
+    \end{card}
+    \centering
+    \cardImg{img/interaction-msg}{0.5\textwidth}
   \end{multicols}
-  \pause[2]
   \pdfcomment{
     Before I talk about my early works, let me briefly explain what aggregate computing is. 
     Here, we view a system as a large group of computing nodes connected by a neighbour relationship, 
@@ -230,23 +263,23 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Execution model}
+\begin{frame}{Computational model}
   \begin{multicols}{2}
     \begin{card}[Round steps]
-      \begin{itemize}
+      \begin{enumerate}
         \item <1-> context creation
         \item <2-> program evaluation producing an export
         \item <3-> export sharing to neighbourhood
-      \end{itemize}
+      \end{enumerate}
     \end{card}
     \only<1>{
-      \cardImg{example-image-a}{0.5\textwidth}
+      \cardImg{img/context}{0.5\textwidth}
     }
     \only<2>{
-      \cardImg{example-image-b}{0.5\textwidth}
+      \cardImg{img/interaction-execution}{0.5\textwidth}
     }
     \only<3>{
-      \cardImg{example-image-c}{0.5\textwidth}
+      \cardImg{img/interaction-exchange}{0.5\textwidth}
     }
   \end{multicols}
   \pdfcomment{
@@ -265,13 +298,13 @@ Machine Learning}
 \begin{frame}{Gradient/Hop count example}
   \begin{multicols}{2}
     \only<1>{
-      \cardImg{example-image-a}{0.5\textwidth}
+      \cardImg{img/gradient}{0.5\textwidth}
     }
     \only<2>{
-      \cardImg{example-image-b}{0.5\textwidth}
+      \cardImg{img/gradient-1}{0.5\textwidth}
     }
     \only<3>{
-      \cardImg{example-image-c}{0.5\textwidth}
+      \cardImg{img/gradient-2}{0.5\textwidth}
     }
     \begin{card}[Definition]
       A program that produce a computational 
@@ -284,12 +317,13 @@ Machine Learning}
     It generates a computational field in which each node generates the distance from a node marked as a source. 
     The hop count problem is similar. Instead of evaluating the distance, the program returns the number of hops from a destination node.
     A naive implementation of this algorithm consists in: i) taking the minimum value from 
-    the neighbour field and ii) incremented by the distance to it.
+    the neighbour field and ii) incremented by the distance to it. eventually, the right field 
+    will be produced.
   }
 %% Here put an image that show the step to compute this field.
 \end{frame}
 \begin{frame}{Gradient/Hop count example}
-  \begin{cardRed}[\textbf{Problem}]
+  \begin{cardRed}[\textbf{Problem} \faThumbsDown]
     Naive solutions suffers of the slow-rising problem.
   \end{cardRed}
   \begin{multicols}{3}
@@ -327,7 +361,7 @@ Machine Learning}
   \end{multicols}
   \pause[3]
   \pause
-  \begin{cardRed}[\textbf{Problem}]
+  \begin{cardRed}[\textbf{Problem} \faThumbsDown]
     Difficulty in guiding the collective to learn a better algorithm. 
   \end{cardRed}
   \pdfcomment{
@@ -359,8 +393,8 @@ Machine Learning}
   \end{multicols}
   \pause[3]
   \pause
-  \begin{cardRed}[\textbf{Problem}]
-    Stagning in local minimum, long convergence time. 
+  \begin{cardRed}[\textbf{Problem} \faThumbsDown]
+    Stagnant in local minimum, long convergence time. 
   \end{cardRed}
   \pdfcomment{
     Even here the neural network is shared with all agents, but the improvement is guided during the simulation itself.
@@ -376,7 +410,14 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Aggregate Computing and Reinforcement Learning}
-\begin{frame}{Aggregate Computing and Reinforcement Learning}
+\begin{frame}{Aggregate Computing and Reinforcement Learning \href{http://tex.stackexchange.com/q/20800/5701}{\faLink}}
+  \begin{card}[Most suitable match]
+    \begin{itemize}
+      \item <1->Usually used in CSAS
+      \item <2->Designed to maximise long term reward
+      \item <3->Quite easy to express aggregate problems as reinforcement learning problems
+    \end{itemize}
+  \end{card}
   \pdfcomment{
     This combination seems to be one of the most suitable for several reasons:
     i) in the literature, it seems the best way to integrate learning into CSAS 
@@ -388,6 +429,24 @@ Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{Aggregate Computing and Reinforcement Learning: Hop count}
+  \begin{multicols}{2}
+    \begin{card}[Independent Q-Learning]
+      \begin{itemize}
+        \item <1-> {\color{accent} Actions:} Increase / NoIncrease
+        \item <2->{\color{accent} State:} Temporal Windows of Speed
+        \item <3->{\color{accent} Reward:} 0 / -1
+      \end{itemize}
+    \end{card}
+    \only<1>{
+      \cardImg{example-image-a}{0.5\textwidth}
+    }
+    \only<2>{
+      \cardImg{example-image-b}{0.5\textwidth}
+    }
+    \only<3>{
+      \cardImg{example-image-c}{0.5\textwidth}
+    }
+  \end{multicols}
   \pdfcomment{
     Our first attempt consists in trying to use standard Q-learning to speed up hop count convergence. 
     Q-Learning seems to reach good performance in the literature, although there are no theorems proving convergence 
