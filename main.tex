@@ -1,11 +1,11 @@
-\documentclass[10pt, aspectratio=169]{beamer}
+\documentclass[9pt, aspectratio=169]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage{multicol}
 \usepackage{pgfpages}
 \usepackage{roboto}
 \usepackage{fontawesome5}
 \usepackage[T1]{fontenc}
-\usepackage[draft]{pdfcomment}
+\usepackage{pdfcomment}
 \title{Research directions for Aggregate Computing with
 Machine Learning}
 \author[G.Aguzzi]{
@@ -389,7 +389,7 @@ Machine Learning}
   \end{cardTiny}
   \begin{multicols}{3}
     \centering
-    \cardImg{example-image-a}{0.18\textwidth}
+    \cardImg{img/gradient-2}{0.18\textwidth}
     \presentationGraphics{example-image-b}{1}{0.18}
     \presentationGraphics{example-image-c}{1-2}{0.18}
   \end{multicols}
@@ -434,9 +434,9 @@ Machine Learning}
   \begin{multicols}{2}
     \begin{card}[Independent Q-Learning]
       \begin{itemize}
-        \item <1-> {\color{accent} Actions:} Increase / NoIncrease
-        \item <2->{\color{accent} State:} Temporal Windows of Speed
-        \item <3->{\color{accent} Reward:} 0 / -1
+        \item <1-> {\color{accent} \textbf{Actions}} \texttt{Increase} / \texttt{NoOp}
+        \item <2->{\color{accent} \textbf{State}} Temporal Windows of Speed
+        \item <3->{\color{accent} \textbf{Reward}} \texttt{0} / \texttt{-1}
       \end{itemize}
     \end{card}
     \only<1>{
