@@ -1,0 +1,29 @@
+\begin{frame}{Computational model}
+  \begin{multicols}{2}
+    \begin{card}[Round steps]
+      \begin{enumerate}
+        \item <1-> context creation
+        \item <2-> program evaluation producing an export
+        \item <3-> export sharing to neighbourhood
+      \end{enumerate}
+    \end{card}
+    \only<1>{
+      \cardImg{img/context}{0.5\textwidth}
+    }
+    \only<2>{
+      \cardImg{img/interaction-execution}{0.5\textwidth}
+    }
+    \only<3>{
+      \cardImg{img/interaction-exchange}{0.5\textwidth}
+    }
+  \end{multicols}
+  \pdfcomment{
+    In these messages, the nodes share the local knowledge necessary to run a program. Indeed
+    an aggregate program has two points of view: i) A collective viewpoint, which refers to the evaluation of computational fields, and a local viewpoint, which follows the global behaviour and periodically executes a round, i.e., 
+    the atomic part of the computation in an aggregate system.
+    A round consists of: i) a context creation where nodes take in values from sensors, messages (also called export) from the neighbourhood, and their old output. 
+    ii) Then, the aggregate program is evaluated, producing the next export that contains the current program output. This data can be also used to perform local actuations.
+    iii) finally, each node shares the export in broadcast to the entire neighbourhood.
+    Note that any computation is asynchronous to other nodes.
+  }
+\end{frame}
