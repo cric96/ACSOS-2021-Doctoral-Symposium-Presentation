@@ -1,1 +1,2 @@
 texlive-science
+texlive-fonts-extra
