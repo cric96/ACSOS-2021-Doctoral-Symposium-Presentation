@@ -1,5 +1,5 @@
 % ! TeX root = ...
-\begin{frame}{Aggregate Computing \faPlus[l]  Supervised Learning}
+\begin{frame}{Aggregate Computing \faPlus[l]  Supervised Learning \href{https://github.com/cric96/experiments-ac-with-learning}{\faLink}}
   \begin{cardTiny}
     \begin{itemize}
       \item <1-> Ground truth generation is done with simulations
@@ -7,17 +7,21 @@
       \item <3-> Each agent have the same network
     \end{itemize}
   \end{cardTiny}
-  \begin{multicols}{3}
-    \centering
-    \cardImg{img/gradient-2}{0.18\textwidth}
-    \presentationGraphics{img/sl-1}{1}{0.18}
-    \presentationGraphics{img/sl-2}{1-2}{0.18}
-  \end{multicols}
+  \only<1-3> {
+    \begin{multicols}{3}
+      \centering
+      \cardImg{img/gradient-2}{0.30\textwidth}
+      \presentationGraphics{img/sl-1}{1}{0.30}
+      \presentationGraphics{img/sl-2}{1-2}{0.30}
+    \end{multicols}
+  }
   \pause[3]
   \pause
-  \begin{cardRed}[\textbf{Problem} \faThumbsDown]
-    Difficulty in guiding the collective to learn a better algorithm. 
-  \end{cardRed}
+  \only<4>{
+    \begin{cardRed}[\textbf{Problem} \faThumbsDown]
+      Difficulty in guiding the collective to learn a better algorithm. 
+    \end{cardRed}  
+  }
   \pdfcomment{
     So starting from an initial global setting, we would achieve some stable results. 
     In the gradient problem, for example, the stable position consists of the distance to a node.

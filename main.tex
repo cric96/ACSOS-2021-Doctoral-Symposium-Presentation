@@ -1,73 +1,11 @@
 \documentclass[9pt, aspectratio=169]{beamer}
-\usepackage[utf8]{inputenc}
-\usepackage{multicol}
-\usepackage{pgfpages}
-\usepackage{roboto}
-\usepackage{fontawesome5}
-\usepackage[T1]{fontenc}
-\usepackage{pdfcomment}
-\title{Research directions for Aggregate Computing with
-Machine Learning}
-\author[G.Aguzzi]{
-  \textbf{Gianluca Aguzzi}\inst{1}
-}
-\institute{
-  \inst{1}
-  \texttt{Alma Mater Studiorum} -- Università di Bologna, Cesena, Italy
-}
-\usetheme{material}
-%& Theme
-\usetheme{material}
-\setbeamercolor{button}{bg=white,fg=accent}
-
-\useLightTheme
-\usePrimaryBlueGrey
-\useAccentIndigo
+\include{partials/packages.tex}
+\include{partials/title-content.tex}
+\include{partials/theme-configuration.tex}
 %% Simplify document writing
-\includeonly{slides/aggregate-and-sl.tex}
-%% Document starts 
+%\includeonly{slides/title.tex, slides/gradient-definition.tex, slides/aggregate-and-sl.tex, slides/references.tex}
+%% Document starts
+\addbibresource{biblio.bib}
 \begin{document}
-\setbeamercovered{transparent=10}
-\setbeamertemplate{itemize item}{\faDotCircle}
-
-\include{slides/title.tex}
-
-\section{Collective (Self-)Adaptive System}
-\include{slides/background.tex}
-
-\section{State of the art solution}
-\include{slides/aggregate-computing.tex}
-\include{slides/machine-learning.tex}
-
-\section{Problem statement}
-\include{slides/problem-statement.tex}
-
-\section{Motivation}
-\include{slides/motivation.tex}
-
-\section{Research Question}
-\include{slides/research-questions.tex}
-
-\section{Early results}
-\include{slides/early-results.tex}
-
-\section{Computational Model}
-\include{slides/computational-model.tex}
-\include{slides/round-steps.tex}
-
-\section{Gradient example}
-\include{slides/gradient-definition.tex}
-\include{slides/gradient-problem.tex}
-
-\section{Approaches}
-\include{slides/aggregate-and-sl.tex}
-\include{slides/aggregate-and-ec.tex}
-\include{slides/rl-setting.tex}
-\include{slides/aggregate-and-rl.tex}
-
-\section{Conclusion}
-\include{slides/conclusion.tex}
-
-\section{References}
-\include{slides/references.tex}
+\input{partials/slides-sequence.tex}
 \end{document}
