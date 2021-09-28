@@ -1,0 +1,32 @@
+% ! TeX root = ...
+\begin{frame}{Aggregate Computing \faPlus[l] Reinforcement Learning: Hop count  \href{https://github.com/cric96/scafi-with-reinforcement-learning}{\faLink}}
+  
+  
+    \begin{card}[Independent Q-Learning]
+      \begin{itemize}
+        \item <1->\highlight { \textbf{Actions} } \texttt{Increase} / \texttt{NoOp}
+        \item <2->\highlight { \textbf{State} } Temporal Windows of Speed
+        \item <3->\highlight { \textbf{Reward} } \success{\faSmile[l] \texttt{0}} / \failure{ \faSadTear[l] \texttt{-1} }
+      \end{itemize}
+    \end{card}
+  \centering
+  \begin{multicols}{3}
+    \cardImg{img/rl.pdf}{0.25\textwidth}
+    \cardImg{img/rl-1.pdf}{0.25\textwidth}
+    \cardImg{img/rl-2.pdf}{0.25\textwidth}
+    
+  \end{multicols}
+  \pdfcomment{
+    Our first attempt consists in trying to use standard Q-learning to speed up hop count convergence. 
+    Q-Learning seems to reach good performance in the literature, although there are no theorems proving convergence 
+    as in the single-agent context.
+    We set up our problems in this way:
+    Actions: an agent can increase the current output by one or standstill.
+    States: is built upon the current node and neighbourhood outputs. 
+    In this case, we use a window of difference from the neighbours that encodes the hop count increasing speed.
+    The reward signal is: 0) if the output is correct at a given time t -1) otherwise.
+    With this setting, we can outperform the standard hop count algorithm.
+    This is an early result. A more in-depth evaluation of state-of-the-art Reinforcement Learning, Deep Learning and Multi Agent Learning
+    can surely help us to find the best learning algorithm applied in Aggregate Computing.
+  }
+\end{frame}

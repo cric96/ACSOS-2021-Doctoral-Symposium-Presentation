@@ -1,0 +1,22 @@
+% ! TeX root = ...
+
+\begin{frame}{Gradient/Hop count example}
+  \begin{cardRed}[\textbf{Problem} \faThumbsDown]
+    Naive solutions suffers of the slow-rising problem.
+  \end{cardRed}
+  \begin{multicols}{3}
+    \cardImg{img/slow-rising-problem}{0.31\textwidth}
+    \cardImg{img/slow-rising-problem-1}{0.31\textwidth}
+    \cardImg{img/slow-rising-problem-2}{0.31\textwidth}
+  \end{multicols}
+  \pause[3]
+  \pdfcomment{
+    This solution suffers from the slow-rising problem: 
+    suppose you have two sources and one of them eventually disappears. 
+    In this case, the nodes take more time to reach the correct value, 
+    as opposed to the time taken at the beginning of the algorithm's execution. 
+    So our first attempt is to reduce the convergence time of the basic hop-count algorithm. 
+    This is already done algorithmically, but we need something that learns how to achieve 
+    faster convergence on its own.
+  }
+\end{frame}

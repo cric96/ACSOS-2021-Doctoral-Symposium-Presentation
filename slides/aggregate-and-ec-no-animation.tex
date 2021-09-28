@@ -1,0 +1,35 @@
+% ! TeX root = ...
+\begin{frame}{Aggregate Computing \faPlus[l] Evolutionary computing \href{https://github.com/cric96/alchemist-with-genetics}{\faLink}}
+  
+  \begin{cardTiny}
+    \begin{itemize}
+      \item <1-> A population of Network is shared within the entire system
+      \item <2-> During the simulation, a fitness function is evaluated
+      \item <3-> Already used in Swarm robotics and automatic design
+    \end{itemize}
+  \end{cardTiny}
+  \only<1-3> {
+    \begin{multicols}{3}
+      \centering
+      \cardImg{img/ec}{0.3\textwidth}
+      \cardImg{img/ec-1}{0.3\textwidth}
+      \cardImg{img/ec-2}{0.3\textwidth}
+    \end{multicols}
+  }
+  \pause[3]
+  \pause
+  % \only<4> {
+  %   \begin{cardRed}[\textbf{Problem} \faThumbsDown]
+  %     Stagnant in local minimum, long convergence time. 
+  %   \end{cardRed}
+  % }
+  \pdfcomment{
+    Even here the neural network is shared with all agents, but the improvement is guided during the simulation itself.
+    So we do not need a correct ground truth for each time step, but we only need to specify a fitness 
+    function that evaluates the overall behaviour of the system. 
+    This type of method is used in swarm robotics and even in automatic design. 
+    Here we observe very low performance in converging to a good solution. 
+    Sometimes a solution is never reached and the search is trapped in a local minimum
+  }
+  \pdfcomment{Optional, the most important part is Aggregate Computing with RL}
+\end{frame}

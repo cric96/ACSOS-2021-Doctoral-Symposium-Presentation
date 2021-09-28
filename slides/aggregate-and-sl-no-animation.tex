@@ -1,0 +1,32 @@
+% ! TeX root = ...
+\begin{frame}{Aggregate Computing \faPlus[l]  Supervised Learning \href{https://github.com/cric96/experiments-ac-with-learning}{\faLink}}
+  \begin{cardTiny}
+    \begin{itemize}
+      \item <1-> Ground truth generation is done with simulations
+      \item <2-> A network is trained with a global view and then
+      \item <3-> Each agent have the same network
+    \end{itemize}
+  \end{cardTiny}
+  \only<1-3> {
+    \begin{multicols}{3}
+      \centering
+      \cardImg{img/gradient-2}{0.30\textwidth}
+      \cardImg{img/sl-1}{0.30\textwidth}
+      \cardImg{img/sl-2}{0.30\textwidth}
+    \end{multicols}
+  }
+  %\only<4>{
+  %  \begin{cardRed}[\textbf{Problem} \faThumbsDown]
+  %    Difficulty in guiding the collective to learn a better algorithm. 
+  %  \end{cardRed}  
+  %}
+  \pdfcomment{
+    So starting from an initial global setting, we would achieve some stable results. 
+    In the gradient problem, for example, the stable position consists of the distance to a node.
+    We do some experiments in this direction.
+    In this setting, each agent has the same neural network trained offline using simulations.
+    We note that it is challenging to achieve a performance boost in this way. Indeed we do not know the correct outcome for each time step, 
+    which makes it difficult to guide the collective to learn a better algorithm.
+  }
+  \pdfcomment{Optional, the most important part is Aggregate Computing with RL}
+\end{frame}
