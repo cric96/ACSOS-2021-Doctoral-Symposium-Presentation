@@ -4,19 +4,19 @@
   \begin{multicols}{2}
     \begin{card}
       \begin{itemize}
-        \item <1->Ensemble of node with an identifier
+        \item <1->Ensemble of nodes with an identifier
         \item <2->Each node has a local-view (i.e. neighbours relationship)
-        \item <3->Interaction happens with message passing (done continously, see next slide).
+        \item <3->Interaction happens with message passing (executed continously).
       \end{itemize}    
     \end{card}
     \centering
     \cardImg{img/interaction-msg}{0.5\textwidth}
   \end{multicols}
   \pdfcomment{
-    Before I talk about my early works, let me briefly explain what aggregate computing is. 
+    Before speaking about my early works, let me briefly explain how aggregate computing computes. 
     Here, we view a system as a large group of computing nodes connected by a neighbour relationship, 
-    which can be either physical (i.e., one node has a connection to another node) or logical/position-based.
-    Each node has only a partial view of the entire system. Interaction with the neighbourhood 
-    is done through message passing.
+    which can be either physical (i.e., one node has a connection to another node) 
+    or logical/position-based. Each node has only a partial view of the entire system. 
+    Interaction with the neighbourhood is done through message passing. 
   }
 \end{frame}
