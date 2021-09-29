@@ -3,21 +3,28 @@
 \begin{frame}{Aggregate Computing~\cite{DBLP:journals/computer/BealPV15}}
   \begin{backgroundblock} 
     \includegraphics[width=\paperwidth]{img/aggregate-computing.jpg} 
-  \end{backgroundblock} 
-  \begin{card}
-    \begin{itemize}
-      \item <1-> A top-down global-to-local approach to express collective behaviour
-      \item <2-> Rooted on \textit{field-calculus}~\cite{DBLP:conf/coordination/AudritoBDV18}
-      \item <3-> Collective behaviour does not depend on system scale
-      \item <4-> Used in various scenarios ranging from smart cities to crowd ~\cite{DBLP:conf/coordination/CasadeiPVN19}
-    \end{itemize}
-  \end{card}
-  \pause[5]
-  \begin{cardRed}[\textbf{Problem} \faThumbsDown]
-    \centering
-    \textit{Building block design is complex}
-  \end{cardRed}
-
+  \end{backgroundblock}
+  \begin{columns}[onlytextwidth, t]
+    \begin{column}{0.657\textwidth}    
+      \begin{cardTiny}
+        \begin{itemize}
+          \item <1-> A top-down global-to-local approach to express collective behaviour
+          \item <2-> Rooted on \textit{field-calculus}~\cite{DBLP:conf/coordination/AudritoBDV18}
+          \item <3-> Collective behaviour does not depend on system scale
+          \item <4-> Used in various scenarios ranging from smart cities to crowd engineering~\cite{DBLP:conf/coordination/CasadeiPVN19}
+        \end{itemize}
+      \end{cardTiny}
+    \end{column}
+    \begin{column}{0.335\textwidth}
+      \cardImg{img/channel.png}{\textwidth}
+    \end{column}
+  \end{columns}
+  \centering
+    \pause[5]
+    \begin{cardRed}[\textbf{Problem} \faThumbsDown]
+      \textit{Solutions are application-specific}
+    \end{cardRed}
+    
   \pdfcomment{
     It is a top-down approach that makes it possible to coordinate large-scale, 
     possibly heterogeneous, highly dynamic systems. It mainly consists of manipulating 

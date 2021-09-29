@@ -1,14 +1,19 @@
 % ! TeX root = ...
 \begin{frame}{Aggregate Computing \faPlus[l] Reinforcement Learning: Hop count  \href{https://github.com/cric96/scafi-with-reinforcement-learning}{\faLink}}
-  
-  
-    \begin{card}[Independent Q-Learning]
-      \begin{itemize}
-        \item <1->\highlight { \textbf{Actions} } \texttt{Increase} / \texttt{NoOp}
-        \item <2->\highlight { \textbf{State} } Temporal Windows of Speed
-        \item <3->\highlight { \textbf{Reward} } \success{\faSmile[l] \texttt{0}} / \failure{ \faSadTear[l] \texttt{-1} }
-      \end{itemize}
-    \end{card}
+  \begin{columns}[onlytextwidth, b]
+    \begin{column}{0.65\textwidth}
+      \begin{card}[Independent Q-Learning]
+        \begin{itemize}
+          \item <1->\highlight { \textbf{Actions} } \texttt{Increase} / \texttt{NoOp}
+          \item <2->\highlight { \textbf{State} } Temporal Windows of Speed
+          \item <3->\highlight { \textbf{Reward} } \success{\faSmile[l] \texttt{0}} / \failure{ \faSadTear[l] \texttt{-1} }
+        \end{itemize}
+      \end{card}
+    \end{column}
+    \begin{column}{0.33\textwidth}
+      \cardImg{img/rl-result}{\textwidth}
+    \end{column}
+  \end{columns}
   \centering
   \begin{multicols}{3}
     \cardImg{img/rl.pdf}{0.25\textwidth}
